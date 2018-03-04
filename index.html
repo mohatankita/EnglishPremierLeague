@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <title>Football Match</title>
+
+    <!-- CSS and Bootstrap library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/stylesheet.css"></link>
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container-fluid backImg">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" href="#/!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!matches">Matches</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!stats">Statistics</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br />
+
+    <ng-view>
+    </ng-view>
+
+
+    <!-- Angular CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-route.min.js"></script>
+
+    <!-- JS files -->
+    <script src="js/app.js"></script>
+    <script src="js/route.js"></script>
+    <script src="js/maincontroller.js"></script>
+    <script src="js/teamFilter.js"></script>
+    <script src="js/scoreFilter.js"></script>
+    <script src="js/statsController.js"></script>
+    <script src="js/singleViewController.js"></script>
+
+</body>
+
+</html>

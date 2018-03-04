@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row setting_width">
+        <select ng-model="selectedYear" ng-options="x for x in year" ng-change="changeme()"></select>
+    </div>
+    <hr />
+    <div class="row setting_width">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No. of Teams</th>
+                        <th>Team Name</th>
+                        <th>Matches Played</th>
+                        <th>Matches Won</th>
+                        <th>Matches Lost</th>
+                        <th>Matches Draw</th>
+                        <th>Total Goals</th>
+                        <th>Goals Against</th>
+                        <th class="GD">Goals Difference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in teamStats">
+                        <td>{{$index + 1}}</td>
+                        <td>{{x.teamname}}</td>
+                        <td>{{x.matchesPlayed}}</td>
+                        <td>{{x.matchesWon}}</td>
+                        <td>{{x.matchesLost}}</td>
+                        <td>{{x.matchesDraw}}</td>
+                        <td>{{x.totalGoals}}</td>
+                        <td>{{x.goalsAgainst}}</td>
+                        <th>{{x.goalsDiff}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

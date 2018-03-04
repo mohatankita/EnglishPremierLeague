@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row setting_width">
+        <select class="dropdown_width" ng-model="selectedYear" ng-options="x for x in year" ng-change="changeme()">
+            </select>
+        <select class="dropdown_width" ng-model="selectedRound" ng-options="x for x in roundName" ng-change="changeme()"></select>
+        <select class="dropdown_width" ng-model="selectedTeam" ng-options="x for x in team" ng-change="changeme()"></select>
+        <select class="dropdown_width" ng-model="selectedScore" ng-options="x for x in score" ng-change="changeme()"></select>
+    </div>
+
+    <div class="row setting_width">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" ng-repeat="y in rounds">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="6">{{y.name}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Played On</td>
+                        <td>Team1</td>
+                        <td>Score1</td>
+                        <td>Score2</td>
+                        <td>Team2</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="x in y.matches | teamFilter : selectedTeam | scoreFilter : selectedScore">
+                        <td>{{x.date}}</td>
+                        <td>{{x.team1.name}}</td>
+                        <td>{{x.score1}}</td>
+                        <td>{{x.score2}}</td>
+                        <td>{{x.team2.name}}</td>
+                        <td><a class="btn btn-info btn-sm" href="#!singlematch/{{y.name}}/{{x}}">Match Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

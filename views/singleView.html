@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row setting_width">
+        <h4>{{roundDetail}}</h4>
+    </div>
+    <br />
+    <div class="row matchCard setting_width">
+        <div class="singleViewTeam responsiveWidth">
+            <h4>{{matchDetail.team1.name}}
+                <br />
+                <sub class="code">({{matchDetail.team1.code}})</sub>
+            </h4>
+        </div>
+        <div class="singleViewScore responsive_Width">
+            <h4>{{matchDetail.score1}}</h4>
+        </div>
+        <div class="singleViewTeam responsive_Width">
+            <h4>V/S</h4>
+        </div>
+        <div class="singleViewScore responsive_Width">
+            <h4>{{matchDetail.score2}}</h4>
+        </div>
+        <div class="singleViewTeam responsiveWidth">
+            <h4>{{matchDetail.team2.name}}
+                <br />
+                <sub class="code">({{matchDetail.team2.code}})</sub>
+            </h4>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <p class="result"><strong>Match won by : </strong>{{matchWon}}</p>
+            <p class="result"><strong>Played On: </strong>{{matchDetail.date}}</p>
+        </div>
+    </div>
+</div>
